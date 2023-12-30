@@ -29,6 +29,7 @@ body{
     align-items: center;
     grid-area: header;
     background-color: #ffffff;
+    padding-bottom: 15px;
 }
 
 #header-title{
@@ -49,6 +50,7 @@ body{
 
 .main-container{
     grid-area:main;
+    font-family: Raleway;
 }
 
 .main-content-container{
@@ -84,8 +86,76 @@ body{
 #menu-content-container{
     background-color: #5d576b;
     color: #ffffff;
+
+}
+
+.menu-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+#menu-top-subtitle{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#menu-title{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#menu-subtitle{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.menu-div-container{
+    display:grid;
+    gap: 30px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+
+}
+
+.menu-div{
+    background-color: #656073;
+    width: 25vw;
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: min-content auto;
+    grid-template-areas:
+    "cube title"
+    ". subtitle";
+    padding: 30px;
+    align-items: center;
+
+
 }
 
 .menu-div-icon{
-    height: 50px;
+    height: 40px;
+    grid-area: cube;
+    margin-right: 30px;
+
+}
+
+.menu-div-title{
+    grid-area: title;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu-div-subtitle{
+    grid-area: subtitle;
+    font-size: 1.2rem;
 }

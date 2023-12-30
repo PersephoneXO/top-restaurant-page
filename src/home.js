@@ -14,16 +14,22 @@ const createHeader=()=>{
     //create header tabs
     let headerTabContainer=document.createElement('div');
     headerTabContainer.classList.add('header-tabs');
-    headerTabContainer.appendChild(createHeaderTabs('Home'));
-    headerTabContainer.appendChild(createHeaderTabs('Menu'));
-    headerTabContainer.appendChild(createHeaderTabs('Contact'));
+    let homeButton=createHeaderTabs('Home');
+    homeButton.id='home-button';
+    headerTabContainer.appendChild(homeButton);
+    let menuButton=createHeaderTabs('Menu');
+    menuButton.id='menu-button';
+    headerTabContainer.appendChild(menuButton);
+    let contactButton=createHeaderTabs('Contact');
+    contactButton.id='contact-button';
+    headerTabContainer.appendChild(contactButton);
     headerContainer.appendChild(headerTabContainer);
 
     return headerContainer;
 }
 
 //function to create header tab buttons
-function createHeaderTabs(page){
+function createHeaderTabs(page,id){
     let headerTab=document.createElement('button');
     headerTab.textContent=page;
     headerTab.classList.add('header-tab-styles');
