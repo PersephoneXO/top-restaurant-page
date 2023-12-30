@@ -1,14 +1,12 @@
-//DOM elements
-const contentContainer=document.querySelector('#content');
 
 
 //funtion to create header div
-function createHeader(){
+const createHeader=()=>{
     let headerContainer=document.createElement('div');
     headerContainer.classList.add('header');
 
     //create header title
-    let headerTitle=document.createElement(p);
+    let headerTitle=document.createElement('p');
     headerTitle.id='header-title';
     headerTitle.textContent='RESTAURANT';
     headerContainer.appendChild(headerTitle);
@@ -33,11 +31,36 @@ function createHeaderTabs(page){
 }
 
 //function to create main container
-function createMainContainer(){
+const createMainHomeContainer=()=>{
     let mainContainer=document.createElement('div');
     mainContainer.classList.add('main-container');
 
     //create second container for the content
     let mainContentContainer=document.createElement('div');
+    mainContentContainer.classList.add('main-content-container');
 
+    //create content
+    //create title
+    let welcomeTitle=document.createElement('p');
+    welcomeTitle.id='welcome-title';
+    welcomeTitle.textContent=`Welcome to [Restaurant Name]`;
+    mainContentContainer.appendChild(welcomeTitle);
+    //create subtitle
+    let welcomeSubtitle=document.createElement('p');
+    welcomeSubtitle.id='welcome-subtitle';
+    welcomeSubtitle.textContent=`Delicious food and great ambiance`;
+    mainContentContainer.appendChild(welcomeSubtitle);
+    //create view menu button
+    let viewMenuButton=document.createElement('button');
+    viewMenuButton.id='view-menu-button';
+    viewMenuButton.textContent=`View Menu`;
+    mainContentContainer.appendChild(viewMenuButton);
+
+    //append the main content container to the main container
+    mainContainer.appendChild(mainContentContainer);
+
+    return mainContainer;
 }
+
+
+export {createHeader,createMainHomeContainer};
