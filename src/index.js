@@ -9,8 +9,7 @@ import { createMainContactContainer } from "./contact";
 //run functions to create home page on page load
 document.addEventListener('DOMContentLoaded',()=>{
     contentContainer.appendChild(createHeader());
-    contentContainer.appendChild(createMainContactContainer());
-    //contentContainer.appendChild(createMainHomeContainer());
+    contentContainer.appendChild(createMainHomeContainer());
     return contentContainer;
 });
 
@@ -30,6 +29,16 @@ contentContainer.addEventListener('click',(e)=>{
         contentContainer.innerHTML='';
         contentContainer.appendChild(createHeader());
         contentContainer.appendChild(createMainMenuContainer());
+        return contentContainer
+    }
+});
+
+//run functions to create and load contact page on tab click
+contentContainer.addEventListener('click',(e)=>{
+    if(e.target.id=='contact-button'){
+        contentContainer.innerHTML='';
+        contentContainer.appendChild(createHeader());
+        contentContainer.appendChild(createMainContactContainer());
         return contentContainer
     }
 });

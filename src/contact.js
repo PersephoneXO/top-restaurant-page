@@ -18,6 +18,7 @@ const createMainContactContainer=()=>{
     let form=document.createElement('form');
     form.setAttribute('action','#');
     form.setAttribute('method','post');
+    form.classList.add('form-element');
 
     //create input container
     let inputContainer=document.createElement('div');
