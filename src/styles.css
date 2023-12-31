@@ -22,7 +22,7 @@ body{
     grid-template-areas:"header"
     "main" ;
 }
-
+/*header*/
 .header{
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ body{
     padding:0 50px;
 
 }
-
+/*home page*/
 .main-container{
     grid-area:main;
     font-family: Raleway;
@@ -82,7 +82,7 @@ body{
 
 }
 
-
+/*menu page*/
 #menu-content-container{
     background-color: #5d576b;
     color: #ffffff;
@@ -159,3 +159,6 @@ body{
     grid-area: subtitle;
     font-size: 1.2rem;
 }
+
+
+/*contact page*/

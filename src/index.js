@@ -4,11 +4,13 @@ const contentContainer=document.querySelector('#content');
 //import functions from external files
 import { createHeader,createMainHomeContainer } from "./home";
 import { createMainMenuContainer } from "./menu";
+import { createMainContactContainer } from "./contact";
 
 //run functions to create home page on page load
 document.addEventListener('DOMContentLoaded',()=>{
     contentContainer.appendChild(createHeader());
-    contentContainer.appendChild(createMainHomeContainer());
+    contentContainer.appendChild(createMainContactContainer());
+    //contentContainer.appendChild(createMainHomeContainer());
     return contentContainer;
 });
 
