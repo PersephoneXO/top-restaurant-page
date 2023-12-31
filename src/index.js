@@ -7,7 +7,7 @@ import { createMainMenuContainer } from "./menu";
 import { createMainContactContainer } from "./contact";
 
 //import css file
-import '../src/'
+import css from './styles.css';
 
 //run functions to create home page on page load
 document.addEventListener('DOMContentLoaded',()=>{
