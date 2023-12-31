@@ -6,6 +6,9 @@ import { createHeader,createMainHomeContainer } from "./home";
 import { createMainMenuContainer } from "./menu";
 import { createMainContactContainer } from "./contact";
 
+//import css file
+import '../src/'
+
 //run functions to create home page on page load
 document.addEventListener('DOMContentLoaded',()=>{
     contentContainer.appendChild(createHeader());
